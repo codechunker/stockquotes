@@ -7,7 +7,7 @@ running on your system. The application runs on port 8091 but of course you can 
  ```
 java -jar stockquotes.jar
 ```
-
+On your browser, go to [http://localhost:8091](http://localhost:8091) to access the page
 # Flow, Concepts and Deductions
 The application was built with the concept of Schedulers and Websockets. 
 When a user adds a stock to watch, a request to is made to YahooFinance API to get the quotes for the stocks added and then goes ahead to push them to a topic.
