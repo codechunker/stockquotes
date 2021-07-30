@@ -28,7 +28,7 @@ public class SchedulerConfig {
     }
 
     @Scheduled(fixedDelay = 3000)
-    public void sendAdhocMessage() throws IOException {
+    public void sendStockQuotesToTopic() throws IOException {
         Map<String, StockQuote> stockQuotes = stockQuoteService.getStockListByNames();
         if (stockQuotes != null && !stockQuotes.isEmpty()) {
             template.convertAndSend("/topic/user", new StockResponse(stockQuotes.toString()));
