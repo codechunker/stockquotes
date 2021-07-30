@@ -67,7 +67,6 @@ public class StockQuoteService {
             }
 
             return totalAvg.compareTo(BigDecimal.ZERO) > 0 ? totalAvg.divide(new BigDecimal(stocksByNames.size())) : BigDecimal.ZERO;
-
         }
 
         return BigDecimal.ZERO;
